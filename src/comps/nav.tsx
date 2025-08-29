@@ -23,11 +23,15 @@ export default function Nav() {
                       bg-white backdrop-blur-md shadow-sm md:rounded-xl">
         {/* Logo */}
         <div className="flex items-center space-x-3">
+          <Link
+            href="/">
           <img
             src="https://smkn2cmi.sch.id/wp-content/uploads/2023/05/web-banner-smk-blue-min.webp"
             alt="SMK Negeri 2 Cimahi"
             className="h-10"
           />
+          
+          </Link>
         </div>
 
         {/* Desktop Menu */}
