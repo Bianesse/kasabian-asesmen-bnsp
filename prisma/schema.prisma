@@ -1,0 +1,45 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model News {
+  id          Int    @id @default(autoincrement())
+  title       String
+  category    String
+  description String
+  author      String
+  date        String // bisa juga DateTime kalau mau parsing
+  image       String
+
+  @@map("news")
+}
+
+model Activity {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  image       String?
+  date        DateTime
+  location    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("activities")
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  createdAt DateTime @default(now())
+
+  @@map("contacts")
+}
