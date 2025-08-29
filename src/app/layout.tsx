@@ -11,7 +11,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "SMK NEGERI 2 CIMAHI",
+  title: "SMK NEGERI 2 Cimahi",
 };
 
 export default function RootLayout({
